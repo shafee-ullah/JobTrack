@@ -1,0 +1,315 @@
+[
+    {
+      "id": "1",
+      "name": "TechNova Solutions",
+      "logo": "https://i.ibb.co.com/FLDznhw8/Technova.png",
+      "location": "San Francisco, CA",
+      "website": "https://technova.com",
+      "industry": "Information Technology",
+      "jobs": [
+        {
+          "id": "job-001",
+          "title": "Frontend Developer",
+          "bannerImage": "https://i.ibb.co.com/YThKD2gJ/Front-End-Developer.jpg",
+          "location": "Remote",
+          "salary": "$80,000 - $100,000",
+          "jobType": "Full-time",
+          "description": "Develop and maintain responsive web interfaces using modern JavaScript frameworks.",
+          "requirements": [
+            "Proficient in HTML, CSS, and JavaScript",
+            "Experience with React or Vue.js",
+            "Familiarity with RESTful APIs",
+            "Good understanding of responsive design",
+            "Excellent problem-solving skills"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "HealthX Innovations",
+      "logo": "https://i.ibb.co.com/Tqk5XrMb/HealthX.png",
+      "location": "Austin, TX",
+      "website": "https://healthxbd.com/",
+      "industry": "Healthcare Technology",
+      "jobs": [
+        {
+          "id": "job-002",
+          "title": "Data Scientist",
+          "bannerImage": "https://i.ibb.co.com/xtFr9vpW/Data-Scientist.jpg",
+          "location": "Austin, TX",
+          "salary": "$110,000 - $140,000",
+          "jobType": "Full-time",
+          "description": "Analyze health data to generate insights and build predictive models for patient outcomes.",
+          "requirements": [
+            "Experience with Python and data analysis libraries",
+            "Strong understanding of machine learning algorithms",
+            "Experience with healthcare datasets",
+            "Proficiency in SQL and NoSQL databases",
+            "Excellent communication skills"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "EcoBuild Solutions",
+      "logo": "https://i.ibb.co.com/QjJ0HGwq/Green-Construction.png",
+      "location": "Denver, CO",
+      "website": "https://ecobuild.solutions/en/",
+      "industry": "Green Construction",
+      "jobs": [
+        {
+          "id": "job-003",
+          "title": "Project Manager",
+          "bannerImage": "https://i.ibb.co.com/LdRF2Png/guidesgreen-technology-construction.jpg",
+          "location": "Denver, CO",
+          "salary": "$90,000 - $110,000",
+          "jobType": "Full-time",
+          "description": "Lead construction projects with a focus on sustainability and eco-friendly practices.",
+          "requirements": [
+            "5+ years of construction project management experience",
+            "Knowledge of green building standards (LEED)",
+            "Strong leadership and organizational skills",
+            "Experience with project management software",
+            "Excellent communication and budgeting skills"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Finix Capital",
+      "logo": "https://i.ibb.co.com/NH8nCV4/Financial-Services.png",
+      "location": "New York, NY",
+      "website": "https://finixcapital.in/",
+      "industry": "Financial Services",
+      "jobs": [
+        {
+          "id": "job-004",
+          "title": "Financial Analyst",
+          "bannerImage": "https://i.ibb.co.com/NdStv2Zx/financial-services.jpg",
+          "location": "New York, NY",
+          "salary": "$70,000 - $90,000",
+          "jobType": "Full-time",
+          "description": "Support investment decisions through detailed financial modeling and analysis.",
+          "requirements": [
+            "Bachelor's degree in Finance or related field",
+            "Strong Excel and modeling skills",
+            "Familiarity with financial reporting",
+            "Analytical mindset",
+            "Experience with Bloomberg or similar tools"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "BrightEdu",
+      "logo": "https://i.ibb.co.com/Vc5cm7k5/Bright-edu.png",
+      "location": "Boston, MA",
+      "website": "https://brightedu.org",
+      "industry": "Education Technology",
+      "jobs": [
+        {
+          "id": "job-005",
+          "title": "Instructional Designer",
+          "bannerImage": "https://i.ibb.co.com/Jj8h0cN6/Educational-tech.png",
+          "location": "Remote",
+          "salary": "$60,000 - $85,000",
+          "jobType": "Full-time",
+          "description": "Design engaging digital learning experiences for K-12 students.",
+          "requirements": [
+            "Experience in eLearning design",
+            "Knowledge of LMS platforms",
+            "Strong visual design skills",
+            "Teaching or curriculum experience",
+            "Familiarity with SCORM and xAPI"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "AutoPilot AI",
+      "logo": "https://i.ibb.co.com/hR5qTfF0/Automotive-100.png",
+      "location": "Detroit, MI",
+      "website": "https://autopilot.ai",
+      "industry": "Automotive AI",
+      "jobs": [
+        {
+          "id": "job-006",
+          "title": "Computer Vision Engineer",
+          "bannerImage": "https://i.ibb.co.com/7N0YqXzp/Automotive-AI.png",
+          "location": "Detroit, MI",
+          "salary": "$105,000 - $130,000",
+          "jobType": "Full-time",
+          "description": "Build AI models for autonomous vehicle vision systems.",
+          "requirements": [
+            "Experience with Python and OpenCV",
+            "Deep learning frameworks (TensorFlow/PyTorch)",
+            "Knowledge of image processing",
+            "Experience in automotive domain a plus",
+            "Good problem-solving skills"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "CloudHive",
+      "logo": "https://i.ibb.co.com/9mtsw0wn/cloud-computing.png",
+      "location": "Seattle, WA",
+      "website": "https://cloudhive.io",
+      "industry": "Cloud Computing",
+      "jobs": [
+        {
+          "id": "job-007",
+          "title": "DevOps Engineer",
+          "bannerImage": "https://i.ibb.co.com/99w4tshS/Cloud-Computing.jpg",
+          "location": "Seattle, WA",
+          "salary": "$100,000 - $125,000",
+          "jobType": "Full-time",
+          "description": "Manage CI/CD pipelines and automate cloud infrastructure.",
+          "requirements": [
+            "Experience with AWS/GCP",
+            "Infrastructure as Code (Terraform, Ansible)",
+            "CI/CD tools (Jenkins, GitHub Actions)",
+            "Containerization (Docker, Kubernetes)",
+            "Scripting in Python/Bash"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "MediaBuzz Agency",
+      "logo": "https://i.ibb.co.com/kg4hGc5M/Digital-marketing.png",
+      "location": "Los Angeles, CA",
+      "website": "https://mediabuzz.agency",
+      "industry": "Digital Marketing",
+      "jobs": [
+        {
+          "id": "job-008",
+          "title": "Social Media Strategist",
+          "bannerImage": "https://i.ibb.co.com/N2hV12md/Social-Media-Strategist.jpg",
+          "location": "Los Angeles, CA",
+          "salary": "$55,000 - $75,000",
+          "jobType": "Full-time",
+          "description": "Plan and execute social media campaigns across platforms.",
+          "requirements": [
+            "Deep understanding of social platforms",
+            "Content creation skills",
+            "Experience with ad platforms (Meta, LinkedIn)",
+            "Data-driven decision making",
+            "Strong communication"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "AeroDynamics",
+      "logo": "https://i.ibb.co.com/84RK0R6H/Aerospace-engineering.png",
+      "location": "Houston, TX",
+      "website": "https://aerodynamics.com",
+      "industry": "Aerospace Engineering",
+      "jobs": [
+        {
+          "id": "job-009",
+          "title": "Aerospace Engineer",
+          "bannerImage": "https://i.ibb.co.com/99WN7YP7/Aerospace-Engineering-Job-Outlook-in-the-U-S-and-Abroad.jpg",
+          "location": "Houston, TX",
+          "salary": "$115,000 - $140,000",
+          "jobType": "Full-time",
+          "description": "Design components for commercial aircraft and satellites.",
+          "requirements": [
+            "Bachelor’s in Aerospace Engineering",
+            "CAD software expertise",
+            "Knowledge of propulsion systems",
+            "Strong math and physics background",
+            "Team collaboration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "FoodieTech",
+      "logo": "https://i.ibb.co.com/JwrJRgjJ/food-delivery.png",
+      "location": "Chicago, IL",
+      "website": "https://foodietech.co",
+      "industry": "Food Delivery Tech",
+      "jobs": [
+        {
+          "id": "job-010",
+          "title": "Mobile App Developer",
+          "bannerImage": "https://i.ibb.co.com/HDZxFKBW/Mobile-App-Developer.jpg",
+          "location": "Remote",
+          "salary": "$85,000 - $110,000",
+          "jobType": "Full-time",
+          "description": "Build and improve user-friendly mobile apps for food ordering.",
+          "requirements": [
+            "Experience with Flutter or React Native",
+            "Published apps in stores",
+            "Strong UI/UX sense",
+            "REST API integration",
+            "Unit and integration testing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "QuantumByte Labs",
+      "logo": "https://i.ibb.co.com/bkmTVJy/quantum-computing.png",
+      "location": "Palo Alto, CA",
+      "website": "https://quantumbyte.io",
+      "industry": "Quantum Computing",
+      "jobs": [
+        {
+          "id": "job-011",
+          "title": "Quantum Software Engineer",
+          "bannerImage": "https://i.ibb.co.com/nMXY10nW/Quantum-Software-Engineer.jpg",
+          "location": "Palo Alto, CA",
+          "salary": "$140,000 - $170,000",
+          "jobType": "Full-time",
+          "description": "Develop algorithms for quantum computing platforms.",
+          "requirements": [
+            "Strong math and quantum theory background",
+            "Experience with Qiskit or Cirq",
+            "Python programming skills",
+            "Research experience",
+            "Excellent analytical skills"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "GreenHarvest",
+      "logo": "https://i.ibb.co.com/FkkztQ7z/Agricultural-Tech.png",
+      "location": "Portland, OR",
+      "website": "https://greenharvest.ag",
+      "industry": "Agricultural Tech",
+      "jobs": [
+        {
+          "id": "job-012",
+          "title": "Agritech Product Manager",
+          "bannerImage": "https://i.ibb.co.com/n87hRyM4/Agriculture-Tech.jpg",
+          "location": "Hybrid (Portland, OR)",
+          "salary": "$95,000 - $115,000",
+          "jobType": "Full-time",
+          "description": "Oversee product development in precision farming solutions.",
+          "requirements": [
+            "Experience in product management",
+            "Knowledge of agricultural technology",
+            "Strong communication and leadership",
+            "Agile methodology experience",
+            "Data analysis skills"
+          ]
+        }
+      ]
+    }
+  ]
+  
