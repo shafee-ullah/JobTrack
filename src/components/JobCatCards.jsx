@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router";
 
 const JobCatCards = ({ company }) => {
-  const [selectedJob, setSelectedJob] = useState(null);
-
   return (
     <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-200 h-full">
       <div className="card-body">
-        {/* Company Logo and Name */}
+        {/* Company Logo and Name - Clickable Link */}
         <div className="flex items-center gap-4 mb-4">
-          <a
-            
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={`/company/${company.id}`}
             className="hover:opacity-75 transition-opacity"
           >
             <img
@@ -20,15 +16,13 @@ const JobCatCards = ({ company }) => {
               alt={company.name}
               className="w-12 h-12 object-contain rounded-lg"
             />
-          </a>
-          <a
-            
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xl font-bold "
+          </Link>
+          <Link
+            to={`/company/${company.id}`}
+            className="text-xl font-bold hover:text-primary transition-colors"
           >
             {company.name}
-          </a>
+          </Link>
         </div>
 
         {/* Job Details */}
@@ -51,23 +45,21 @@ const JobCatCards = ({ company }) => {
             </div>
 
             {/* View Details Button */}
-            <button 
+            <Link
+              to={`/job/${job.id}`}
+              state={{ job, company }}
               className="btn 
               
               rounded-3xl 
               bg-green-600 
               text-white
               hover:bg-[rgba(11,130,5,1)]
-              border-none mt-2"
-              onClick={() => setSelectedJob(job)}
+              border-none mt-4"
             >
               View Details
-            </button>
+            </Link>
           </div>
         ))}
-
-        {/* Job Details Modal */}
-     
       </div>
     </div>
   );

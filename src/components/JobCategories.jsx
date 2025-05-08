@@ -1,36 +1,3 @@
-// import React, { useState } from "react";
-// import Spinner from "./Spinner";
-// import JobCatCards from "./JobCatCards";
-
-// const JobCategories = (jobCategories) => {
-//   const [displayData, setDisplayData] = useState([]);
-//   return (
-//     <div className="py-10">
-//       <h2 className="font-bold text-4xl text-center">Popular Job Categories</h2>
-//       <p className="text-center text-gray-500 mt-4 mb-8">
-//         A better career is out there. We'll help you find it.We are your first
-//         step to becoming a better you.
-//       </p>
-
-// <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
-//     {displayData.map((job) =>(
-
-//     <JobCatCards key={job.id} jobs={job} />
-
-
-// ))}
-// </div>
-
-
-//     </div>
-//   );
-// };
-
-// export default JobCategories;
-
-
-
-// JobCategories.jsx
 import React, { useEffect, useState } from "react";
 import JobCatCards from "./JobCatCards";
 import Spinner from "./Spinner";
