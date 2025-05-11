@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import JobCategories from '../components/JobCategories';
 import { useLoaderData } from 'react-router';
 import JobsiteTrack from '../components/JobsiteTrack';
+import Blogs from '../components/Blogs';
 
 const Home = () => {
     const jobCategories = useLoaderData();
@@ -12,6 +13,8 @@ const Home = () => {
             <Hero />
             <JobsiteTrack />
             <JobCategories jobCategories={jobCategories} />
+            <Blogs />
+
         </div>
     );
 };
