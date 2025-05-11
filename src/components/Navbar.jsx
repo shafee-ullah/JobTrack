@@ -25,18 +25,18 @@ const Navbar = () => {
           </div>
 
           <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="">About</NavLink>
-            </li>
-            <li>
-            <NavLink to="">Jobs</NavLink>
+          <li>
+            <NavLink to="/">Home</NavLink>
           </li>
-            <li>
-              <NavLink to="">Contact Us</NavLink>
-            </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/OurSuccess">Our Success Stories</NavLink>
+          </li>
+          <li>
+            <NavLink to="/ContactUs">Contact Us</NavLink>
+          </li>
           </ul>
         </div>
         <NavLink to="/" className="flex items-center">
@@ -52,13 +52,13 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="">About</NavLink>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <NavLink to="">Jobs</NavLink>
+            <NavLink to="/OurSuccess">Our Success Stories</NavLink>
           </li>
           <li>
-            <NavLink to="">Contact Us</NavLink>
+            <NavLink to="/ContactUs">Contact Us</NavLink>
           </li>
         </ul>
       </div>

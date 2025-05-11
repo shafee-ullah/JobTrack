@@ -4,6 +4,10 @@ import Errorpages from "../pages/Errorpages";
 import Home from "../pages/Home";
 import Spinner from "../components/Spinner";
 import ViewDetails from "../pages/ViewDetails";
+import AboutUs from "../pages/AboutUs";
+
+import OurSuccess from "../pages/OurSuccess";
+import ContactUs from "../pages/ContactUs";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -27,7 +31,29 @@ const router = createBrowserRouter([
             element: <ViewDetails />,
             loader: () => fetch("/company-data.json"),
             hydrateFallbackElement: <Spinner />,
+          },
+          {
+            path: "/about",
+            element:<AboutUs />,
+           
+           
+            hydrateFallbackElement: <Spinner />,
+          },
+          {
+            path: "/OurSuccess",
+            element:<OurSuccess />,
+           
+           
+            hydrateFallbackElement: <Spinner />,
+          },
+          {
+            path: "/ContactUs",
+            element:<ContactUs />,
+           
+           
+            hydrateFallbackElement: <Spinner />,
           }
+
         ],
       },
     ]);
