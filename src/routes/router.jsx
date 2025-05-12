@@ -8,6 +8,9 @@ import AboutUs from "../pages/AboutUs";
 
 import OurSuccess from "../pages/OurSuccess";
 import ContactUs from "../pages/ContactUs";
+import AuthLayout from "../Layout/AuthLayout";
+import LogIn from "../pages/LogIn";
+import Register from "../pages/Register";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -56,5 +59,22 @@ const router = createBrowserRouter([
 
         ],
       },
+      {
+path: "/auth",
+element: <AuthLayout />,
+children: [
+  {
+    path: "/auth/login",
+    element: <LogIn></LogIn>,
+  },
+  {
+    path: "/auth/register",
+    element: <Register></Register>,
+  },
+
+],
+
+
+      }
     ]);
 export default router;

@@ -65,7 +65,7 @@ const Navbar = () => {
 
       <div className="navbar-end flex gap-2">
         <NavLink
-          to=""
+          to="/auth/login"
           className="btn 
               
               rounded-3xl 
@@ -78,7 +78,7 @@ const Navbar = () => {
         </NavLink>
 
         <NavLink
-          to=""
+          to="/auth/register"
           className="btn 
               
               rounded-3xl 
