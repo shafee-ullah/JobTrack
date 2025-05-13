@@ -53,13 +53,12 @@ const LogIn = () => {
   };
 
   return (
-   
-   
     <div className="flex w-11/12 mx-auto mt-10 flex-1">
-        <Helmet>
-    <title>Login - JobTrack</title>
-  </Helmet>
-    
+      {/* Title */}
+      <Helmet>
+        <title>Login - JobTrack</title>
+      </Helmet>
+
       <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
