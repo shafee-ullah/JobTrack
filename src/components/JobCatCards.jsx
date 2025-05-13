@@ -28,7 +28,7 @@ const JobCatCards = ({ company }) => {
         {/* Job Details */}
         {company.jobs.map((job) => (
           <div key={job.id} className="space-y-3">
-            <div className="border-t pt-4">
+            {/* <div className="border-t pt-4">
               <h3 className="text-lg font-semibold">{job.title}</h3>
               <div className="flex items-center gap-2 text-sm text-gray-500 mt-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -42,7 +42,7 @@ const JobCatCards = ({ company }) => {
                 </svg>
                 {job.jobType}
               </div>
-            </div>
+            </div> */}
 
             {/* View Details Button */}
             <Link
@@ -54,7 +54,8 @@ const JobCatCards = ({ company }) => {
               bg-green-600 
               text-white
               hover:bg-[rgba(11,130,5,1)]
-              border-none mt-4"
+              border-none mt-1
+            "
             >
               View Details
             </Link>

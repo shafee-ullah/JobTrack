@@ -1,13 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router';
-import { toast } from 'react-toastify';
 import { IoReturnDownBackSharp } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from '../provider/AuthProvider';
+import {
+  CheckCircleIcon,
+  XMarkIcon,
+  ExclamationTriangleIcon,
+} from "@heroicons/react/20/solid";
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
   const { createUser, googleSignIn, updateUserProfile } = useContext(AuthContext);
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const navigate = useNavigate();
 
   const handleRegister = event => {
@@ -36,38 +42,40 @@ const Register = () => {
       .then(result => {
         updateUserProfile(name, photoURL)
           .then(() => {
-            toast.success('Registration Successful!');
-            navigate('/');
+            setSuccess('You are now Registered');
+            setTimeout(() => navigate('/'), 1000);
           })
           .catch(error => {
-            setError(error.message);
-            toast.error(error.message);
+            setError('Registration Failed');
+            
           });
       })
       .catch(error => {
-        setError(error.message);
-        toast.error(error.message);
+        setError('Registration Failed');
+        
       });
   };
 
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then(result => {
-        toast.success('Google Registration Successful!');
-        navigate('/');
+        setSuccess('You are now Registered');
+        setTimeout(() => navigate('/'), 1000);
       })
       .catch(error => {
-        setError(error.message);
-        toast.error(error.message);
+        setError('Registration Failed');
+       
       });
   };
 
   return (
     <div className="flex w-11/12 mx-auto mt-10 flex-1">
+      <Helmet>
+    <title>Registration - JobTrack</title>
+  </Helmet>
       <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
-          
             <h2 className="mt-8 text-2xl font-bold tracking-tight text-gray-900">
               Create your account
             </h2>
@@ -78,6 +86,48 @@ const Register = () => {
               </NavLink>
             </p>
           </div>
+
+          {/* Success Alert */}
+          {success && (
+            <div className="rounded-md bg-green-50 p-4 mb-4">
+              <div className="flex">
+                <div className="shrink-0">
+                  <CheckCircleIcon
+                    className="size-5 text-green-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm font-medium text-green-800">{success}</p>
+                </div>
+                <div className="ml-auto pl-3">
+                  <button
+                    onClick={() => setSuccess('')}
+                    className="inline-flex rounded-md bg-green-50 p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
+                  >
+                    <XMarkIcon className="size-5" aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Error Alert */}
+          {error && (
+            <div className="border-l-4 border-yellow-400 bg-yellow-50 p-4 mb-4">
+              <div className="flex">
+                <div className="shrink-0">
+                  <ExclamationTriangleIcon
+                    className="size-5 text-yellow-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm text-yellow-700">{error}</p>
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="mt-10">
             <form onSubmit={handleRegister} className="space-y-6">
@@ -145,8 +195,6 @@ const Register = () => {
                 </p>
               </div>
 
-              {error && <p className="text-sm text-red-600">{error}</p>}
-
               <div>
                 <button
                   type="submit"
@@ -178,15 +226,15 @@ const Register = () => {
               </div>
 
               <div className="mt-6 flex justify-center">
-  <NavLink
-    to="/"
-    className="inline-flex items-center justify-center rounded-full bg-green-600 p-3 text-white shadow-sm hover:bg-green-700"
-    aria-label="Back to Home"
-    title="Back to Home"
-  >
-    <IoReturnDownBackSharp className="h-5 w-5" />
-  </NavLink>
-</div>
+                <NavLink
+                  to="/"
+                  className="inline-flex items-center justify-center rounded-full bg-green-600 p-3 text-white shadow-sm hover:bg-green-700"
+                  aria-label="Back to Home"
+                  title="Back to Home"
+                >
+                  <IoReturnDownBackSharp className="h-5 w-5" />
+                </NavLink>
+              </div>
 
             </div>
           </div>

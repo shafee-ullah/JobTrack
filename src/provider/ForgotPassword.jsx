@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useLocation, NavLink } from 'react-router';
-import { toast } from 'react-toastify';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import auth from '../firebase/firebase.config';
 
@@ -9,20 +8,20 @@ const ForgotPassword = () => {
     const queryParams = new URLSearchParams(location.search);
     const [email, setEmail] = useState(queryParams.get('email') || '');
     const [message, setMessage] = useState('');
+    const [error, setError] = useState('');
 
     const handleResetPassword = (e) => {
         e.preventDefault();
-        
+        setMessage('');
+        setError('');
+
         sendPasswordResetEmail(auth, email)
             .then(() => {
-                setMessage('Password reset email sent! Check your inbox.');
-                toast.success('Password reset email sent!');
-                // Redirect to Gmail
+                setMessage('Password updated successfully');
                 window.open('https://mail.google.com', '_blank');
             })
-            .catch((error) => {
-                setMessage(error.message);
-                toast.error(error.message);
+            .catch(() => {
+                setError('An error occurred');
             });
     };
 
@@ -51,7 +50,11 @@ const ForgotPassword = () => {
                             <button className="btn btn-primary">Reset Password</button>
                         </div>
                         {message && <p className="text-green-600">{message}</p>}
-                        <p>Remember your password? <NavLink to="/auth/login" className="text-blue-600 font-bold">Login</NavLink></p>
+                        {error && <p className="text-red-600">{error}</p>}
+                        <p>
+                            Remember your password?{' '}
+                            <NavLink to="/auth/login" className="text-blue-600 font-bold">Login</NavLink>
+                        </p>
                     </form>
                 </div>
             </div>

@@ -1,48 +1,65 @@
 import React, { useContext, useState } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router";
-import { toast } from "react-toastify";
 import { IoReturnDownBackSharp } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
+import {
+  CheckCircleIcon,
+  XMarkIcon,
+  ExclamationTriangleIcon,
+} from "@heroicons/react/20/solid";
 import { AuthContext } from "../provider/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const LogIn = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
+
+  const from = location.state?.from?.pathname || location.state || "/";
 
   const handleLogin = (event) => {
     event.preventDefault();
+    setError("");
+    setSuccess("");
+
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
 
     signIn(email, password)
-      .then((result) => {
-        toast.success("Login Successful!");
-        navigate(from, { replace: true });
+      .then(() => {
+        setSuccess("Logged In Successfully");
+        setTimeout(() => navigate(from, { replace: true }), 1000);
       })
-      .catch((error) => {
-        setError(error.message);
-        toast.error(error.message);
+      .catch(() => {
+        setError("An error occurred");
       });
   };
 
   const handleGoogleSignIn = () => {
+    setError("");
+    setSuccess("");
+
     googleSignIn()
-      .then((result) => {
-        toast.success("Google Login Successful!");
-        navigate(from, { replace: true });
+      .then(() => {
+        setSuccess("Logged In Successfully");
+        setTimeout(() => navigate(from, { replace: true }), 1000);
       })
-      .catch((error) => {
-        setError(error.message);
-        toast.error(error.message);
+      .catch(() => {
+        setError("An error occurred");
       });
   };
 
   return (
+   
+   
     <div className="flex w-11/12 mx-auto mt-10 flex-1">
+        <Helmet>
+    <title>Login - JobTrack</title>
+  </Helmet>
+    
       <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
@@ -59,6 +76,50 @@ const LogIn = () => {
               </NavLink>
             </p>
           </div>
+
+          {/* Success Alert */}
+          {success && (
+            <div className="rounded-md bg-green-50 p-4 my-4">
+              <div className="flex">
+                <div className="shrink-0">
+                  <CheckCircleIcon
+                    className="size-5 text-green-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm font-medium text-green-800">
+                    {success}
+                  </p>
+                </div>
+                <div className="ml-auto pl-3">
+                  <button
+                    onClick={() => setSuccess("")}
+                    className="inline-flex rounded-md bg-green-50 p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
+                  >
+                    <XMarkIcon className="size-5" aria-hidden="true" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Error Alert */}
+          {error && (
+            <div className="border-l-4 border-yellow-400 bg-yellow-50 p-4 my-4">
+              <div className="flex">
+                <div className="shrink-0">
+                  <ExclamationTriangleIcon
+                    className="size-5 text-yellow-400"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm text-yellow-700">{error}</p>
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="mt-10">
             <form onSubmit={handleLogin} className="space-y-6">
@@ -107,8 +168,6 @@ const LogIn = () => {
                   </NavLink>
                 </div>
               </div>
-
-              {error && <p className="text-sm text-red-600">{error}</p>}
 
               <div>
                 <button

@@ -1,29 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router';
+import Spinner from '../components/Spinner';
 
 const AboutUs = () => {
+
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) return <Spinner />;
     return (
-    //     <div>
-    //          <div className="p-8  mx-auto mt-10">
-    //   <div className="bg-white shadow-xl rounded-2xl p-6 md:p-10 text-center">
-    //     <h1 className="text-4xl font-bold text-green-600 mb-4">About JobTrack</h1>
-    //     <p className="text-gray-700 text-lg mb-6">
-    //       Welcome to <strong>JobTrack</strong> – your trusted partner in building a better career future. <br /> We are a cutting-edge job portal dedicated to connecting talented individuals with top companies around the globe.
-    //     </p>
-    //     <p className="text-gray-700 text-lg mb-6">
-    //       At JobTrack, we empower job seekers with smart tools, real-time job tracking, and AI-driven recommendations to land their dream job faster. For employers, we streamline recruitment by providing powerful filters, insights, and seamless communication tools.
-    //     </p>
-    //     <p className="text-gray-700 text-lg mb-6">
-    //       Whether you're hunting for your first job or scouting talent for your growing team – JobTrack makes the process smarter, faster, and more human.
-    //     </p>
-    //     <Link to="/jobs" className="inline-block mt-4 bg-green-600 text-white px-6 py-3 rounded-full text-lg  hover:bg-green-700 transition">
-    //       Explore Jobs
-    //     </Link>
-    //   </div>
-    // </div>
-    //     </div>
+   
 
     <div className="p-8  mx-auto">
+         <Helmet>
+    <title>About-JobTracker</title>
+  </Helmet>
       <div className="bg-white shadow-xl rounded-2xl p-6 md:p-10 text-center">
         <h1 className="text-4xl font-bold text-green-600 mb-4">About JobTrack</h1>
         

@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet';
+import Spinner from '../components/Spinner';
 
 const ContactUs = () => {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
@@ -13,9 +15,20 @@ const ContactUs = () => {
     alert('Thank you for contacting JobTrack! We will get back to you soon.');
     setForm({ name: '', email: '', subject: '', message: '' });
   };
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 200);
+    return () => clearTimeout(timer);
+  }, []);
 
+  if (loading) return <Spinner />;
   return (
+   
     <div className="  px-2  md:px-12 lg:px-16 xl:px-24mx-auto">
+         <Helmet>
+    <title>Contact Us- JobTracker</title>
+  </Helmet>
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-green-600">Contact Us</h1>
         <p className="text-gray-700 mt-4 text-lg">

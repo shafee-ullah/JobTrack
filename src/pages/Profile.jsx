@@ -1,13 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { NavLink } from 'react-router';
 import { FaUserCircle, FaCamera } from 'react-icons/fa';
 import { AuthContext } from '../provider/AuthProvider';
+import { Helmet } from 'react-helmet';
+import Spinner from '../components/Spinner';
 
 const Profile = () => {
     const { user } = useContext(AuthContext);
+const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 200);
+    return () => clearTimeout(timer);
+  }, []);
 
+  if (loading) return <Spinner />;
     return (
+
+      
         <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+            <Helmet>
+                        <title>Profile-JobTracker</title> 
+                        </Helmet>
             <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
                 <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">
                     My Profile

@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Spinner from '../components/Spinner';
+import { Helmet } from 'react-helmet';
 
 const OurSuccess = () => {
+
+
     const stories = [
         {
           name: 'John Lewart',
@@ -39,8 +43,20 @@ const OurSuccess = () => {
           story: `I love how easy it was to track every stage of my applications. JobTrack made me feel empowered and organized throughout the hiring process.`
         }
       ];
+
+      const [loading, setLoading] = useState(true);
+        
+        useEffect(() => {
+          const timer = setTimeout(() => setLoading(false), 200);
+          return () => clearTimeout(timer);
+        }, []);
+      
+        if (loading) return <Spinner />;
     return (
         <div>
+          <Helmet>
+            <title>Success Stories - JobTracker</title> 
+            </Helmet>
     <div className="px-2  md:px-12 lg:px-16 xl:px-24  mb-10">
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold text-green-600 mt-6">Our Success Stories</h1>
