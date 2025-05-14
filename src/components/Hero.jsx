@@ -1,5 +1,26 @@
 import React from "react";
+import { motion, MotionConfig } from "framer-motion";
 import BannerImg from "../assets/BannerImg.jpg";
+
+// Split text component
+const SplitText = ({ children, ...props }) => {
+  const words = children.split(" ");
+
+  return words.map((word, i) => {
+    return (
+      <div key={i} className="inline-block overflow-hidden">
+        <motion.div
+          {...props}
+          custom={i}
+          className="inline-block"
+          style={{ display: "inline-block" }}
+        >
+          {word + (i !== words.length - 1 ? "\u00A0" : "")}
+        </motion.div>
+      </div>
+    );
+  });
+};
 
 const Hero = () => {
   return (
@@ -12,7 +33,22 @@ const Hero = () => {
         <div className="mx-auto max-w-7xl px-8 py-14 lg:py-32 sm:py-40 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-8 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
             <h1 className="max-w-2xl text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl lg:col-span-2 xl:col-auto">
-              Find the career of your dreams with our job portal
+              <SplitText
+                initial={{ y: "100%" }}
+                animate="visible"
+                variants={{
+                  visible: (i) => ({
+                    y: 0,
+                    transition: {
+                      delay: i * 0.1,
+                      duration: 0.5,
+                      ease: [0.22, 1, 0.36, 1],
+                    },
+                  }),
+                }}
+              >
+                Find the career of your dreams with our job portal
+              </SplitText>
             </h1>
             <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
               <p className="text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
@@ -25,7 +61,6 @@ const Hero = () => {
                 <a
                   href="#"
                   className="btn 
-              
               rounded-3xl 
             bg-green-600
               text-white

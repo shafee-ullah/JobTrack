@@ -1,12 +1,41 @@
-# React + Vite
+# JobTrack - Your Career Companion 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![JobTrack Banner](public/banner.jpg) <!-- Add your banner image if available -->
 
-Currently, two official plugins are available:
+JobTrack is a modern job portal that connects talented professionals with top employers across industries. Whether you're looking for your dream job or seeking the perfect candidate, JobTrack provides a seamless experience for both job seekers and employers.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Key Features
 
-## Expanding the ESLint configuration
+### For Job Seekers:
+- 🔍 Advanced job search with filters (location, salary, experience level)
+- 📊 Personalized job recommendations
+- 📝 Easy application tracking system
+- 🎯 Resume builder and optimization tips
+- 🔔 Job alert notifications
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### For Employers:
+- 🏢 Intelligent candidate matching
+- ⚡ Quick job posting interface
+- 📈 Applicant management dashboard
+- 🔎 Advanced filtering for candidate search
+- 💬 Direct messaging system
+
+## 🛠️ Technologies Used
+
+### Frontend:
+- ⚛️ React.js
+- 🎨 Tailwind CSS with daisyUI components
+- ✨ Framer Motion for animations
+- 🔄 React Router for navigation
+- 📊 React CountUp for animated statistics
+- 🔍 React Helmet for SEO management
+- 🔮 Heroicons & React Icons for beautiful icons
+
+### Backend:
+- 🔥 Firebase (Authentication, Firestore Database, Storage)
+
+### Live URL:
+-
+
+
+
