@@ -54,7 +54,7 @@ JobTrack is a modern job portal that connects talented professionals with top em
 
 1. Clone the repository
 ```bash
-git clone https://github.com/programming-hero-web-course1/b11a9-react-authentication-shafee-ullah.git
+git clone https://github.com/
 ```
 
 2. Install dependencies
